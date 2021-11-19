@@ -1,0 +1,18 @@
+
+
+let f1 = (foo, bar) => {
+    console.log("foo:", foo); // fine
+    console.log("bar:", bar); // fine
+    console.log("foo:", hello); // ha ha no fuck you, this is not in scope, you die
+
+}
+
+
+
+let f2 = () => {
+    let hello = "hello";    
+    f1(hello, "world");
+}
+
+
+f2();
